@@ -1,0 +1,1047 @@
+/* ============================================
+   Tax Course Creation Platform - Custom Styles
+   ============================================ */
+
+/* ============================================
+   1. Base & Layout Styles
+   ============================================ */
+
+body {
+    font-family: 'Figtree', ui-sans-serif, system-ui, sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+}
+
+main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* ============================================
+   2. Typography
+   ============================================ */
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 0.75rem;
+}
+
+h4 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   3. Form Elements
+   ============================================ */
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="file"],
+.form-group textarea,
+.form-group select,
+.content-title,
+.content-type,
+.content-body {
+    width: 100%;
+    padding: 0.625rem 0.875rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #1f2937;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus,
+.content-title:focus,
+.content-type:focus,
+.content-body:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.form-text {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.file-upload-group {
+    margin-top: 1rem;
+}
+
+/* ============================================
+   4. Buttons
+   ============================================ */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    white-space: nowrap;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Primary Button */
+.btn-primary {
+    color: #ffffff;
+    background-color: #6366f1;
+    border-color: #6366f1;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background-color: #4f46e5;
+    border-color: #4f46e5;
+}
+
+.btn-primary:active:not(:disabled) {
+    background-color: #4338ca;
+    border-color: #4338ca;
+}
+
+/* Secondary Button */
+.btn-secondary {
+    color: #ffffff;
+    background-color: #6b7280;
+    border-color: #6b7280;
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background-color: #4b5563;
+    border-color: #4b5563;
+}
+
+/* Success Button */
+.btn-success {
+    color: #ffffff;
+    background-color: #10b981;
+    border-color: #10b981;
+}
+
+.btn-success:hover:not(:disabled) {
+    background-color: #059669;
+    border-color: #059669;
+}
+
+/* Danger Button */
+.btn-danger {
+    color: #ffffff;
+    background-color: #ef4444;
+    border-color: #ef4444;
+}
+
+.btn-danger:hover:not(:disabled) {
+    background-color: #dc2626;
+    border-color: #dc2626;
+}
+
+/* Button Sizes */
+.btn-sm {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+}
+
+.btn-lg {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+/* Button Group */
+.btn-group {
+    display: inline-flex;
+    gap: 0.5rem;
+}
+
+/* Loading State */
+.loading {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #ffffff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.add-btn-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-actions {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+/* ============================================
+   5. Messages & Alerts
+   ============================================ */
+
+#message-container {
+    margin-bottom: 1.5rem;
+}
+
+.success-message {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: #065f46;
+    background-color: #d1fae5;
+    border: 1px solid #6ee7b7;
+    border-radius: 0.375rem;
+    border-left: 4px solid #10b981;
+}
+
+.error-message {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: #991b1b;
+    background-color: #fee2e2;
+    border: 1px solid #fecaca;
+    border-radius: 0.375rem;
+    border-left: 4px solid #ef4444;
+}
+
+.no-courses,
+.no-modules,
+.no-content {
+    padding: 2rem;
+    text-align: center;
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+.loading-spinner {
+    padding: 3rem;
+    text-align: center;
+    color: #6b7280;
+    font-size: 1.125rem;
+}
+
+/* ============================================
+   6. Module Styles
+   ============================================ */
+
+/* Section Headers */
+.section-header {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4f46e5;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Module Container */
+.module {
+    margin-bottom: 2rem;
+    background-color: #ffffff;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.module:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.module-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-bottom: none;
+}
+
+.module-header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.module-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.module-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.btn-toggle-module {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.btn-toggle-module:hover {
+    transform: scale(1.1);
+}
+
+.module-body {
+    padding: 1.5rem;
+}
+
+/* Content Section Headers */
+.content-section-header {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: #f3f4f6;
+    border-left: 4px solid #6366f1;
+    border-radius: 0.25rem;
+}
+
+.content-section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #374151;
+    margin: 0 0 0.25rem 0;
+}
+
+.content-section-subtitle {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.contents-container {
+    margin-top: 1rem;
+}
+
+/* Module Card (for display view) */
+.module-card {
+    margin-bottom: 1.5rem;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.module-card .module-header {
+    padding: 1.25rem;
+    background-color: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.module-card .module-header h3 {
+    margin-bottom: 0;
+}
+
+.module-description {
+    padding: 1rem 1.25rem;
+    color: #6b7280;
+    background-color: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.module-content {
+    padding: 1.25rem;
+}
+
+/* ============================================
+   7. Content Item Styles
+   ============================================ */
+
+.content-item {
+    margin-bottom: 1rem;
+    padding: 1.25rem;
+    background-color: #f9fafb;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.5rem;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.content-item:hover {
+    border-color: #d1d5db;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Nested Content Items */
+.content-item.nested-content-item {
+    margin-left: 2rem;
+    background-color: #ffffff;
+    border-left: 4px solid #6366f1;
+    border-top: 2px solid #e5e7eb;
+    border-right: 2px solid #e5e7eb;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.nested-content {
+    margin-top: 1rem;
+}
+
+/* Content Header */
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.content-header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.content-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #6366f1;
+    border-radius: 0.25rem;
+}
+
+.content-title-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.btn-icon {
+    font-size: 0.875rem;
+}
+
+.content-title-section {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.content-title-section h4 {
+    margin-bottom: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.content-type-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 9999px;
+    white-space: nowrap;
+}
+
+.content-type-text {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.content-type-video {
+    background-color: #fce7f3;
+    color: #9f1239;
+}
+
+.content-type-document {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.content-type-quiz {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.content-body {
+    margin-top: 0.75rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.375rem;
+}
+
+.content-body p {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.content-file {
+    margin-top: 1rem;
+}
+
+.document-link,
+.file-link {
+    margin-top: 0.5rem;
+}
+
+.nested-content,
+.nested-contents {
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    padding-left: 1.5rem;
+    border-left: 2px solid #d1d5db;
+}
+
+.contents-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* ============================================
+   8. Course Styles
+   ============================================ */
+
+/* Course List Page */
+.courses-list-page {
+    padding: 2rem 1rem;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    margin-bottom: 0;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.course-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.course-card-thumbnail {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background-color: #f3f4f6;
+}
+
+.course-card-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.course-card-content {
+    padding: 1.25rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+}
+
+.course-description {
+    color: #6b7280;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.course-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.meta-item {
+    font-size: 0.75rem;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.course-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Course Detail Page */
+.course-detail {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.course-header {
+    margin-bottom: 2rem;
+}
+
+.course-header-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.course-category {
+    margin-bottom: 1.5rem;
+}
+
+.category-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #6366f1;
+    background-color: #eef2ff;
+    border-radius: 9999px;
+}
+
+.course-thumbnail {
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.course-thumbnail img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.course-description {
+    margin-bottom: 1.5rem;
+}
+
+.course-description h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.75rem;
+}
+
+.course-description p {
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+.feature-video {
+    margin-bottom: 1.5rem;
+}
+
+.feature-video h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.75rem;
+}
+
+.feature-video video {
+    border-radius: 0.5rem;
+    max-width: 100%;
+}
+
+.course-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.course-content {
+    padding-top: 2rem;
+    border-top: 2px solid #e5e7eb;
+}
+
+.course-content h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+.modules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ============================================
+   9. Toggle & Interactive Elements
+   ============================================ */
+
+.btn-toggle,
+.content-toggle {
+    background: none;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    color: #6b7280;
+    transition: color 0.15s;
+}
+
+.btn-toggle:hover,
+.content-toggle:hover {
+    color: #374151;
+}
+
+.toggle-icon {
+    font-size: 0.875rem;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+button[aria-expanded="false"] .toggle-icon {
+    transform: rotate(-90deg);
+}
+
+/* ============================================
+   10. Responsive Design
+   ============================================ */
+
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .module-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .content-header {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .course-actions,
+    .form-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .course-actions .btn,
+    .form-actions .btn {
+        width: 100%;
+    }
+
+    .nested-content,
+    .nested-contents {
+        margin-left: 0.75rem;
+        padding-left: 0.75rem;
+    }
+
+    /* Improve form groups on mobile */
+    .form-group {
+        margin-bottom: 1.25rem;
+    }
+
+    /* Better spacing for modules on mobile */
+    .module {
+        padding: 1rem;
+    }
+
+    .module-header {
+        padding: 1rem;
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: flex-start;
+    }
+
+    .module-header-left {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .module-body {
+        padding: 1rem;
+    }
+
+    .content-section-header {
+        padding: 0.75rem;
+    }
+
+    .content-item.nested-content-item {
+        margin-left: 1rem;
+    }
+
+    .btn-group {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1.125rem;
+    }
+
+    .course-detail {
+        padding: 1rem;
+    }
+
+    .module {
+        padding: 1rem;
+    }
+
+    .content-item {
+        padding: 0.875rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8125rem;
+    }
+
+    .course-card {
+        padding: 1rem;
+    }
+
+    /* Stack buttons vertically on small screens */
+    .btn-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .btn-group .btn {
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    .module-number {
+        min-width: 2rem;
+        height: 2rem;
+        font-size: 0.875rem;
+    }
+
+    .content-number {
+        min-width: 1.5rem;
+        height: 1.5rem;
+        font-size: 0.675rem;
+    }
+
+    .content-item.nested-content-item {
+        margin-left: 0.5rem;
+    }
+}
+
+/* ============================================
+   11. Utility Classes
+   ============================================ */
+
+.validation-error {
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    color: #991b1b;
+    background-color: #fee2e2;
+    border: 1px solid #fecaca;
+    border-radius: 0.375rem;
+}
+
+.field-error {
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: #dc2626;
+    display: block;
+}
+
+.error-field {
+    border-color: #dc2626 !important;
+    background-color: #fef2f2 !important;
+}
+
+.error-field:focus {
+    border-color: #dc2626 !important;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-muted {
+    color: #6b7280;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.mt-3 {
+    margin-top: 0.75rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+    margin-bottom: 0.75rem;
+}
+
+/* ============================================
+   12. Print Styles
+   ============================================ */
+
+@media print {
+    .btn,
+    .course-actions,
+    .form-actions,
+    .page-header .btn {
+        display: none;
+    }
+
+    .course-card {
+        break-inside: avoid;
+    }
+
+    .module {
+        break-inside: avoid;
+    }
+}
